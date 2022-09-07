@@ -117,3 +117,8 @@ header#header {
     flex: 0 0 25%;
     height: 35px;
 }
+
+.empresa_historia--parrafos {
+    height: 100%;
+    border: 1px solid red;
+}
