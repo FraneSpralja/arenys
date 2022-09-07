@@ -102,5 +102,18 @@ header#header {
     flex: 0 0 60%;
     display: flex;
     flex-flow: column;
-    justify-content: center;
+    justify-content: flex-start;
+}
+
+/* Prueba Botones Expandibles */
+
+.pruebaBotones {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: nowrap;
+}
+
+.pruebaBotones > button {
+    flex: 0 0 25%;
+    height: 35px;
 }
