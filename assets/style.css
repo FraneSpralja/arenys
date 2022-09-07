@@ -1,0 +1,106 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+}
+
+html {
+    background: #f0f9fc;
+}
+
+.container {
+    display: flex;
+    flex-flow: column;
+}
+
+/* NAV */
+
+nav.navBar {
+    background: #63ecef;
+}
+
+div.navBar_menu {
+    display: flex;
+    align-items: center;
+}
+
+.navBar_menu--logo {
+    flex: 0 0 10%;
+}
+
+ul#navBar_menu--list {
+    flex: 0 0 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+li.navBar_menu--item {
+    float: left;
+    min-width: 160px;
+    display: block;
+    text-align: center;
+    transition-property: border-bottom;
+    transition-duration: 1s;
+    transition-delay: .2s;
+    transition-timing-function: ease-in-out;
+}
+
+a.navBar_menu--link {
+    font-size: 25px;
+    color: #353535;
+}
+
+li.navBar_menu--item:hover > a.navBar_menu--link::after {
+    transform: scale3d(1, 1, 1);
+}
+
+a.navBar_menu--link::after {
+    content: "";
+    background: #353535;
+    position: relative;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    z-index: 0;
+    transform: scale3d(0, 1, 1);
+    transition: transform .3s;
+    transition-timing-function: cubic-bezier(1, .68, .16, .9);
+}
+
+/* HEADER */
+header#header {
+    padding: 30px;
+}
+
+.empresa_historia {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+
+.empresa_historia--imagen {
+    flex: 0 0 40%;
+}
+
+.empresa_historia--body {
+    flex: 0 0 60%;
+}
+
+.empresa_historia--imagen > img {
+    height: auto;
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 0 4px #454545;
+}
+
+.empresa_historia--body {
+    flex: 0 0 60%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
