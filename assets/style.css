@@ -150,12 +150,33 @@ main#main {
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
 }
 
 .productos_container--icono {
-    flex: 0 0 16%;
+    flex: 0 0 15%;
     padding: 5px;
-    border: 1px solid red;
     text-align: center;
     border-radius: 7px;
+}
+
+h3.productos_container--title {
+    font-size: 25px;
+    padding-bottom: 12px;
+}
+
+.productos_container--icono span {
+    display: flex;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 1px solid #000;
+}
+
+.productos_container--icono img {
+    width: 130px;
+    display: block;
+    margin: auto;
 }

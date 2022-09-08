@@ -70,28 +70,28 @@ function mostrarHistoriaDeLaEmpresa() {
 function iconosEmpresasProductos() {
     const productos = [
         {
-            tipo: "Artroscopia",
+            tipo: "Artroscopía",
             src: "./assets/img/icons/arthroscopy.png"
         },
         {
-            tipo: "Artroscopia",
-            src: "./assets/img/icons/arthroscopy.png"
+            tipo: "Prótesis",
+            src: "./assets/img/icons/prosthesis.png"
         },
         {
-            tipo: "Artroscopia",
-            src: "./assets/img/icons/arthroscopy.png"
+            tipo: "Visualización",
+            src: "./assets/img/icons/full-body.png"
         },
         {
-            tipo: "Artroscopia",
-            src: "./assets/img/icons/arthroscopy.png"
+            tipo: "Post Operatorio",
+            src: "./assets/img/icons/stretcher.png"
         },
         {
-            tipo: "Artroscopia",
-            src: "./assets/img/icons/arthroscopy.png"
+            tipo: "Bio Materiales",
+            src: "./assets/img/icons/medicina.png"
         },
         {
-            tipo: "Artroscopia",
-            src: "./assets/img/icons/arthroscopy.png"
+            tipo: "C. Plaquetario",
+            src: "./assets/img/icons/blood-test.png"
         }
     ]
 
@@ -103,11 +103,16 @@ function iconosEmpresasProductos() {
         titleProductos.classList.add('productos_container--title');
         titleProductos.textContent += productos[i].tipo;
 
+        const iconSpan = document.createElement('span')
+
         const iconProductos = document.createElement('img');
         iconProductos.src += productos[i].src;
 
         divContainer.appendChild(titleProductos);
-        divContainer.appendChild(iconProductos);
+
+        divContainer.appendChild(iconSpan);
+        iconSpan.appendChild(iconProductos);
+        
         productosContainer.appendChild(divContainer);
     }
 
