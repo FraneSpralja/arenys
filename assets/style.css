@@ -160,6 +160,7 @@ main#main {
     padding: 5px;
     text-align: center;
     border-radius: 7px;
+    cursor: pointer;
 }
 
 h3.productos_container--title {
@@ -169,14 +170,32 @@ h3.productos_container--title {
 
 .productos_container--icono span {
     display: flex;
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 200px;
     border-radius: 50%;
     border: 1px solid #000;
+    background: #63ecef;
+    margin: auto;
+    transition-property: background-color;
+    transition-duration: .4s;
+    transition-delay: .1s;
+    transition-timing-function: linear;
 }
 
 .productos_container--icono img {
     width: 130px;
     display: block;
     margin: auto;
+    transition-property: filter;
+    transition-duration: .4s;
+    transition-delay: .1s;
+    transition-timing-function: linear;
+}
+
+.productos_container--icono:hover > span {
+    background-color: #df0b13;
+}
+
+.productos_container--icono:hover img {
+    filter: invert(.85);
 }
