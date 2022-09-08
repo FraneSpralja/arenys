@@ -32,7 +32,7 @@ div.navBar_menu {
 }
 
 ul#navBar_menu--list {
-    flex: 0 0 90%;
+    flex: 0 0 85%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -142,7 +142,14 @@ p.expandible_body--text {
 
 /* SECTION PRODCUTOS */
 main#main {
-    padding: 0 30px 30px;
+    padding-bottom: 30px;
+}
+
+main#main h2 {
+    text-align: center;
+    font-size: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .productos_container {
@@ -198,4 +205,51 @@ h3.productos_container--title {
 
 .productos_container--icono:hover img {
     filter: invert(.85);
+}
+
+.container-modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #00000048;
+    height: 100%;
+    display: flex;
+    margin: auto;
+}
+
+.container-modal > .modalBody {
+    display: flex;
+    flex-flow: row;
+    margin: auto;
+    padding: 40px 25px;
+    border-radius: 7px;
+    background: #efecec;
+}
+
+.container-modal > .modalBody li.empresas-item {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+}
+
+.container-modal > .modalBody li.empresas-item div {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    min-height: 180px;
+    justify-content: space-between;
+}
+
+.container-modal > .modalBody li.empresas-item div img {
+    height: auto;
+    min-width: 300px;
+    max-width: 300px;
+}
+
+.container-modal > .modalBody li.empresas-item div span {
+    font-size: 30px;
 }
