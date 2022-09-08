@@ -122,3 +122,40 @@ header#header {
     height: 100%;
     border: 1px solid red;
 }
+
+p.expandible_body--text {
+    margin-bottom: 5px;
+    font-size: 20px;
+    padding: 5px 15px;
+}
+
+.empresa_historia--expandible {
+    top: 0;
+    opacity: 1;
+    z-index: 1;
+    transition-property: top, z-index, opacity;
+    transition-delay: .5s;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+
+
+/* SECTION PRODCUTOS */
+main#main {
+    padding: 0 30px 30px;
+}
+
+.productos_container {
+    padding: 10px 0;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+
+.productos_container--icono {
+    flex: 0 0 16%;
+    padding: 5px;
+    border: 1px solid red;
+    text-align: center;
+    border-radius: 7px;
+}
