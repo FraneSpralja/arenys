@@ -399,3 +399,66 @@ footer#footer {
 .footer_logo img {
     width: 270px;
 }
+
+.burger-menu {
+    display: none;
+}
+
+@media (orientation: portrait) and (max-width: 700px) {
+    .empresa_historia--imagen {
+        flex: 0 0 100%;
+        margin-bottom: 20px;
+    }
+
+    .empresa_historia--imagen > img {
+        width: 100%;
+    }
+
+    .empresa_historia--body {
+        flex: 0 0 100%;
+    }
+
+    form#formulario {
+        width: 90%;
+    }
+
+    .contacto_comoLlegar--iframe{
+        display: none;
+    }
+
+    .form_box:not(.respuesta, .submit) {
+        min-width: 80%;
+    }
+
+    ul#navBar_menu--list {
+        display: block;
+        padding: 20px;
+        position: absolute;
+        background: #fbeaea;
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+        left: 0;
+        right: 0;
+        top: -200px;
+    }
+
+    li.navBar_menu--item {
+        float: inherit;
+    }
+
+    .burger-menu {
+        flex: 0 0 10%;
+        height: auto;
+        margin-left: auto;
+        margin-right: 30px;
+        display: block;
+        transition-property: top;
+        transition-delay: .1s;
+        transition-duration: .6s;
+        transition-timing-function: linear;
+    }
+
+    .mobile-menu {
+        top: 98px !important;
+    }
+}

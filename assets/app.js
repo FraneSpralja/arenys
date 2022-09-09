@@ -3,6 +3,7 @@ const historiaEmpresa = document.querySelector('.empresa_historia--parrafos');
 const productosContainer = document.querySelector('.productos_container');
 const containerBody = document.querySelector('body > .container');
 const formulario = document.querySelector('#formulario')
+const burgerMenu = document.querySelector('.burger-menu');
 
 const productos = [
     {
@@ -78,6 +79,7 @@ const empresas = [
 
 // EVENT LISTENER
 document.addEventListener('DOMContentLoaded', () => {
+    toggleMenu()
     mostrarHistoriaDeLaEmpresa();
     iconosEmpresasProductos();
     formulario.addEventListener('submit', formularioContacto)
@@ -305,6 +307,14 @@ function mostrarMensaje(msj, tipo) {
 function limpiarHTML(ele) {
     while(ele.firstChild) {
         ele.removeChild(ele.firstChild)
+    }
+}
+
+function toggleMenu() {
+    const menuList = document.querySelector('ul#navBar_menu--list')
+
+    burgerMenu.onclick = function() {
+        menuList.classList.toggle('mobile-menu')
     }
 }
 
