@@ -275,5 +275,56 @@ div#form_container {
 
 form#formulario {
     padding: 20px;
-    border: 1px solid red;
+    background: #fdfdfd;
+    border-radius: 5px;
+    box-shadow: 0 0 7px #454545;
+}
+
+.form_box:not(.respuesta, .submit) {
+    display: flex;
+    flex-flow: column;
+    min-width: 700px;
+    margin-bottom: 15px;
+}
+
+.form_box label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.form_box input, 
+.form_box textarea, 
+.form_box select {
+    padding: 5px 12px;
+    min-height: 21px;
+    border-radius: 10px;
+    border: none;
+    background: #fceaea;
+    font-size: 18px;
+}
+
+select#asunto option {
+    background-color: #dbfcfd;
+}
+
+select#asunto option:checked {
+    background: #f1cdcd;
+}
+
+.form_box textarea {
+    min-height: 70px;
+}
+
+.form_box.submit button {
+    display: block;
+    width: 50%;
+    padding: 7px 12px;
+    font-size: 20px;
+    margin: auto;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(180deg, #63ecef, #68ecef, #7bf4f7, #68ecef, #63ecef);
+    box-shadow: 0 0 15px #dddbdb;
+    cursor: pointer;
 }
