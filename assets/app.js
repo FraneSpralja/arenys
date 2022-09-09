@@ -312,10 +312,17 @@ function limpiarHTML(ele) {
 
 function toggleMenu() {
     const menuList = document.querySelector('ul#navBar_menu--list')
+    const menuItem = document.querySelectorAll('li.navBar_menu--item');
 
     burgerMenu.onclick = function() {
         menuList.classList.toggle('mobile-menu')
     }
+
+    menuItem.forEach(li => {
+        li.onclick = function() {
+            menuList.classList.remove('mobile-menu')
+        }
+    })
 }
 
 function limpiarFormulario() {

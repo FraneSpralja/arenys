@@ -499,4 +499,22 @@ a.close-modal {
         right: -24px;
         top: -48px;
     }
+
+    .container-modal {
+        z-index: 9;
+    }
+
+    nav.navBar {
+        position: fixed;
+        left: 0;
+        right: 0;
+    }
+
+    header#header {
+        padding-top: 120px;
+    }
+
+    .empresa_historia--expandible{
+        z-index: -1 !important;
+    }
 }
