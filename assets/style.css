@@ -404,6 +404,21 @@ footer#footer {
     display: none;
 }
 
+a.close-modal {
+    font-size: 20px;
+    font-weight: bold;
+    color: #454545;
+    background: #68ecef;
+    padding: 13px;
+    position: relative;
+    max-height: 12px;
+    border-radius: 50%;
+    line-height: 65%;
+    right: -44px;
+    top: -58px;
+    box-shadow: 0 0 4px #000;
+}
+
 @media (orientation: portrait) and (max-width: 700px) {
     .empresa_historia--imagen {
         flex: 0 0 100%;
@@ -460,5 +475,28 @@ footer#footer {
 
     .mobile-menu {
         top: 98px !important;
+    }
+
+    .container-modal > .modalBody {
+        padding: 30px 15px;
+        flex: 0 0 82%;
+    }
+
+    .container-modal > .modalBody li.empresas-item div img {
+        min-width: 225px;
+    }
+
+    .container-modal > .modalBody li.empresas-item div{
+        min-height: 155px;
+    }
+
+    .container-modal > .modalBody li.empresas-item{
+        justify-content: center;
+    }
+
+    a.close-modal {
+        z-index: 9;
+        right: -24px;
+        top: -48px;
     }
 }
