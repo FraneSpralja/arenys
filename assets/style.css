@@ -116,11 +116,29 @@ header#header {
 .pruebaBotones > button {
     flex: 0 0 25%;
     height: 35px;
+    background: #fbeaea;
+    border: 1px solid #f3bbbb;
+}
+
+button.expandible_btn:first-of-type {
+    border-top-left-radius: 10px;
+}
+
+button.expandible_btn:last-of-type {
+    border-top-right-radius: 10px;
+}
+
+button.expandible_btn.active {
+    box-shadow: inset 0 0 4px #f19595;
 }
 
 .empresa_historia--parrafos {
     height: 100%;
-    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 2px 1px #555555;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 p.expandible_body--text {
@@ -255,6 +273,17 @@ h3.productos_container--title {
 }
 
 /* CONTACTO */
+
+.contacto_comoLlegar {
+    display: flex;
+    flex-flow: column;
+}
+
+.contacto_comoLlegar h3 {
+    font-size: 25px;
+    padding-bottom: 15px;
+}
+
 section#contacto {
     padding: 10px;
 }
@@ -268,9 +297,11 @@ section#contacto > h2 {
 
 div#form_container {
     display: flex;
-    flex-flow: column;
+    flex-flow: row;
     flex-wrap: wrap;
     align-content: center;
+    justify-content: center;
+    column-gap: 50px;
 }
 
 form#formulario {
@@ -327,4 +358,44 @@ select#asunto option:checked {
     background: linear-gradient(180deg, #63ecef, #68ecef, #7bf4f7, #68ecef, #63ecef);
     box-shadow: 0 0 15px #dddbdb;
     cursor: pointer;
+}
+
+.mensaje {
+    padding: 10px;
+    width: 90%;
+    text-align: center;
+    font-size: 18px;
+    margin: auto;
+    margin-bottom: 18px;
+    border-radius: 5px;
+}
+
+.enviado {
+    background: #a0f0a0;
+    color: #016401;
+    border: 1px solid #50c750;
+}
+
+.error {
+    background: #f0a0a0;
+    color: #640101;
+    border: 1px solid #c75050;
+}
+
+footer#footer {
+    margin-top: 40px;
+    padding: 20px 40px;
+    background: #454545;
+    display: flex;
+}
+
+.footer_container {
+    display: flex;
+    flex: 0 0 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_logo img {
+    width: 270px;
 }

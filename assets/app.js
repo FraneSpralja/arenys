@@ -2,6 +2,7 @@
 const historiaEmpresa = document.querySelector('.empresa_historia--parrafos');
 const productosContainer = document.querySelector('.productos_container');
 const containerBody = document.querySelector('body > .container');
+const formulario = document.querySelector('#formulario')
 
 const productos = [
     {
@@ -79,6 +80,7 @@ const empresas = [
 document.addEventListener('DOMContentLoaded', () => {
     mostrarHistoriaDeLaEmpresa();
     iconosEmpresasProductos();
+    formulario.addEventListener('submit', formularioContacto)
 });
 
 
@@ -89,6 +91,8 @@ function mostrarHistoriaDeLaEmpresa() {
     botonesExpandibles.forEach((btn) => {
         btn.addEventListener('click', () => {
             limpiarHTML(historiaEmpresa)
+
+            const active = document.querySelector('.active')
 
             console.log(btn.value)
 
@@ -105,16 +109,24 @@ function mostrarHistoriaDeLaEmpresa() {
             parrafoExpandibleDos.classList.add('expandible_body--text');
             parrafoExpandibleTres.classList.add('expandible_body--text');
 
+
             if(btn.value === "1") {
-                parrafoExpandibleUno.textContent = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo sunt eius alias itaque. Sunt, aut non? Nostrum ratione delectus, inventore recusandae praesentium perspiciatis atque quaerat et quas corrupti amet perferendis libero, eos dolores quae, sapiente quos ut nesciunt optio dolor.`
+                parrafoExpandibleUno.textContent = `Perteneciente al destacado grupo de empresas Arenys, Arenys Med destaca en sus años de trayectoria como un negocio familiar a la vanguardia en la entrega de los mejores insumos médicos.`
                 
-                parrafoExpandibleDos.textContent = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo sunt eius alias itaque. Sunt, aut non? Nostrum ratione delectus, inventore recusandae praesentium perspiciatis atque quaerat et quas corrupti amet perferendis libero, eos dolores quae, sapiente quos ut nesciunt optio dolor.`
+                parrafoExpandibleDos.textContent = `Enfocados en otorgar los más destacados productos de primera línea en su rubro, nuestra empresa brinda la asistencia necesaria para que todos los profesionales del área médica den el mejor bienestar a sus pacientes.`
                 
-                parrafoExpandibleTres.textContent = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo sunt eius alias itaque. Sunt, aut non? Nostrum ratione delectus, inventore recusandae praesentium perspiciatis atque quaerat et quas corrupti amet perferendis libero, eos dolores quae, sapiente quos ut nesciunt optio dolor.`
+                parrafoExpandibleTres.textContent = `De esta manera, al contar con la mejor calidad del mercado a su disposición, los resultados a obtener son de excelencia.`
 
                 divBody.appendChild(parrafoExpandibleUno)
                 divBody.appendChild(parrafoExpandibleDos)
                 divBody.appendChild(parrafoExpandibleTres)
+            
+                if(!active){
+                    btn.classList.toggle('active')
+                }else{
+                    active.classList.remove('active')
+                    btn.classList.toggle('active')
+                }
 
             }else if(btn.value === "2") {
                 parrafoExpandibleUno.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo sunt eius alias itaque. Sunt, aut non? Nostrum ratione delectus, inventore recusandae praesentium perspiciatis atque quaerat et quas corrupti amet perferendis libero, eos dolores quae, sapiente quos ut nesciunt optio dolor."
@@ -123,15 +135,36 @@ function mostrarHistoriaDeLaEmpresa() {
 
                 divBody.appendChild(parrafoExpandibleUno)
                 divBody.appendChild(parrafoExpandibleDos)
+
+                if(!active){
+                    btn.classList.toggle('active')
+                }else{
+                    active.classList.remove('active')
+                    btn.classList.toggle('active')
+                }
             }else if(btn.value === "3") {
                 parrafoExpandibleUno.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo sunt eius alias itaque. Sunt, aut non? Nostrum ratione delectus, inventore recusandae praesentium perspiciatis atque quaerat et quas corrupti amet perferendis libero, eos dolores quae, sapiente quos ut nesciunt optio dolor."
 
                 divBody.appendChild(parrafoExpandibleUno)
+
+                if(!active){
+                    btn.classList.toggle('active')
+                }else{
+                    active.classList.remove('active')
+                    btn.classList.toggle('active')
+                }
             } else if(btn.value === "4") {
                 parrafoExpandibleUno.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo sunt eius alias itaque. Sunt, aut non? Nostrum ratione delectus, inventore recusandae praesentium perspiciatis atque quaerat et quas corrupti amet perferendis libero, eos dolores quae, sapiente quos ut nesciunt optio dolor."
                 parrafoExpandibleDos.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo sunt eius alias itaque. Sunt, aut non? Nostrum ratione delectus, inventore recusandae praesentium perspiciatis atque quaerat et quas corrupti amet perferendis libero, eos dolores quae, sapiente quos ut nesciunt optio dolor."
                 divBody.appendChild(parrafoExpandibleUno)
                 divBody.appendChild(parrafoExpandibleDos)
+
+                if(!active){
+                    btn.classList.toggle('active')
+                }else{
+                    active.classList.remove('active')
+                    btn.classList.toggle('active')
+                }
             }
 
             divExpandible.appendChild(divBody)
@@ -231,8 +264,60 @@ function pintarModalProducto(prod) {
 
 }
 
+function formularioContacto(e) {
+    e.preventDefault()
+
+    const nombre = document.querySelector('#nombre').value;
+    const email = document.querySelector('#email').value;
+    const telefono = document.querySelector('#telefono').value;
+    const asunto = document.querySelector('#asunto').value;
+    const mensaje = document.querySelector('#mensaje').value;
+    const empresa = document.querySelector('#empresa').value;
+
+    if(nombre == "" || email == "" || telefono == "" || mensaje == "" || empresa == "") {
+        mostrarMensaje('todos los campos son obligatorios.', 'error')
+    } else {
+        mostrarMensaje('Tu mensaje ha sido enviado, pronto te contactaremos.', 'enviado')
+    }
+
+}
+
+function mostrarMensaje(msj, tipo) {
+    const parrafoMsj = document.querySelector('.msj');
+    if(!parrafoMsj){
+        console.log(parrafoMsj)
+        const respuesta = document.querySelector('.respuesta');
+    
+        const parrafo = document.createElement('p');
+        parrafo.classList.add('mensaje', 'msj', tipo);
+        parrafo.textContent = msj;
+    
+        respuesta.appendChild(parrafo)
+
+        setTimeout(() => {
+            parrafo.remove()
+            limpiarFormulario()
+        }, 5000)
+    }
+
+}
+
 function limpiarHTML(ele) {
     while(ele.firstChild) {
         ele.removeChild(ele.firstChild)
     }
+}
+
+function limpiarFormulario() {
+    const nombre = document.querySelector('#nombre');
+    const email = document.querySelector('#email');
+    const telefono = document.querySelector('#telefono');
+    const mensaje = document.querySelector('#mensaje');
+    const empresa = document.querySelector('#empresa');
+
+    nombre.value = '';
+    email.value = '';
+    telefono.value = '';
+    mensaje.value = '';
+    empresa.value = '';
 }
