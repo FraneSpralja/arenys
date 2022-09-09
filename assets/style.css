@@ -253,3 +253,27 @@ h3.productos_container--title {
 .container-modal > .modalBody li.empresas-item div span {
     font-size: 30px;
 }
+
+/* CONTACTO */
+section#contacto {
+    padding: 10px;
+}
+
+section#contacto > h2 {
+    text-align: center;
+    font-size: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+div#form_container {
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+form#formulario {
+    padding: 20px;
+    border: 1px solid red;
+}
