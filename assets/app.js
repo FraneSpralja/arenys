@@ -6,7 +6,22 @@ const formulario = document.querySelector('#formulario')
 const burgerMenu = document.querySelector('.burger-menu');
 
 const imgStory = [
-    
+    {
+        id: 1,
+        src: 'assets/img/arenys_story/historia.jpg',   
+    },
+    {
+        id: 2,
+        src: 'assets/img/arenys_story/actualidad.jpg',   
+    },
+    {
+        id: 3,
+        src: 'assets/img/arenys_story/mision.jpg',   
+    },
+    {
+        id: 4,
+        src: 'assets/img/arenys_story/vision.jpg',   
+    },
 ]
 
 const productos = [
@@ -98,9 +113,10 @@ function mostrarHistoriaDeLaEmpresa() {
         btn.addEventListener('click', () => {
             limpiarHTML(historiaEmpresa)
 
-            const active = document.querySelector('.active')
+            const active = document.querySelector('.active');
+            const imgSlide = document.querySelector('.empresa_historia--imagen > img');
 
-            console.log(btn.value)
+            console.log(btn.value);
 
             const divExpandible = document.createElement('div');
             divExpandible.classList.add('empresa_historia--expandible')
@@ -172,11 +188,14 @@ function mostrarHistoriaDeLaEmpresa() {
                     btn.classList.toggle('active')
                 }
             }
-
+            
             divExpandible.appendChild(divBody)
-
+            
             historiaEmpresa.appendChild(divExpandible)
+
+            cambiarImagenHeader(imgSlide, btn)
         })
+
     })
 }
 
@@ -341,4 +360,13 @@ function limpiarFormulario() {
     telefono.value = '';
     mensaje.value = '';
     empresa.value = '';
+}
+
+function cambiarImagenHeader(img, btn) {
+    console.log(img)
+    for(let i = 0; i < imgStory.length; i++) {
+        if(btn.value == imgStory[i].id) {
+            img.src = imgStory[i].src
+        }
+    }
 }
