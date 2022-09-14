@@ -5,6 +5,10 @@ const containerBody = document.querySelector('body > .container');
 const formulario = document.querySelector('#formulario')
 const burgerMenu = document.querySelector('.burger-menu');
 
+const imgStory = [
+    
+]
+
 const productos = [
     {
         tipo: "Artroscopía",
@@ -35,42 +39,42 @@ const productos = [
 const empresas = [
     {
         empresa: "Integra",
-        src: "https://www.grupoarenys.cl/arenysmed/wp-content/themes/arenys/images/logo_integra.png",
+        src: "assets/img/logos_prod/logo_integra.png",
         producto: {
             id: [5]
         }
     },
     {
         empresa: "Durolane",
-        src: "https://www.grupoarenys.cl/arenysmed/wp-content/themes/arenys/images/logo_durolane.png",
+        src: "assets/img/logos_prod/logo_durolane.png",
         producto: {
             id: [5]
         }
     },
     {
         empresa: "Bioteccel",
-        src: "https://www.grupoarenys.cl/arenysmed/wp-content/themes/arenys/images/logo_bio.png",
+        src: "assets/img/logos_prod/logo_bio.png",
         producto: {
             id: [5]
         }
     },
     {
         empresa: "Smith & Nephew",
-        src: "https://www.grupoarenys.cl/arenysmed/wp-content/themes/arenys/images/logo_sn.png",
+        src: "assets/img/logos_prod/logo_sn.png",
         producto: {
             id: [1, 2, 6]
         }
     },
     {
         empresa: "Breg",
-        src: "https://www.grupoarenys.cl/arenysmed/wp-content/themes/arenys/images/logo_breg.png",
+        src: "assets/img/logos_prod/logo_breg.png",
         producto: {
             id: [4]
         }
     },
     {
         empresa: "Endoret",
-        src: "https://www.grupoarenys.cl/arenysmed/wp-content/themes/arenys/images/logo_endoret.png",
+        src: "assets/img/logos_prod/logo_endoret.png",
         producto: {
             id: [6]
         }

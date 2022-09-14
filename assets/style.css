@@ -19,7 +19,7 @@ html {
 /* NAV */
 
 nav.navBar {
-    background: #63ecef;
+    background: #00000052;
 }
 
 div.navBar_menu {
@@ -51,7 +51,7 @@ li.navBar_menu--item {
 
 a.navBar_menu--link {
     font-size: 25px;
-    color: #353535;
+    color: #000;
 }
 
 li.navBar_menu--item:hover > a.navBar_menu--link::after {
@@ -60,7 +60,7 @@ li.navBar_menu--item:hover > a.navBar_menu--link::after {
 
 a.navBar_menu--link::after {
     content: "";
-    background: #353535;
+    background: #000;
     position: relative;
     display: block;
     left: 0;
@@ -199,7 +199,7 @@ h3.productos_container--title {
     width: 200px;
     border-radius: 50%;
     border: 1px solid #000;
-    background: #63ecef;
+    background: #00000052;
     margin: auto;
     transition-property: background-color;
     transition-duration: .4s;
@@ -218,11 +218,11 @@ h3.productos_container--title {
 }
 
 .productos_container--icono:hover > span {
-    background-color: #df0b13;
+    background-color: #5ef6a5;
 }
 
 .productos_container--icono:hover img {
-    filter: invert(.85);
+    /* filter: invert(.85); */
 }
 
 .container-modal {
@@ -331,7 +331,7 @@ form#formulario {
     min-height: 21px;
     border-radius: 10px;
     border: none;
-    background: #fceaea;
+    background: #f2f2f2;
     font-size: 18px;
 }
 
@@ -355,7 +355,7 @@ select#asunto option:checked {
     margin: auto;
     border-radius: 10px;
     border: none;
-    background: linear-gradient(180deg, #63ecef, #68ecef, #7bf4f7, #68ecef, #63ecef);
+    background: linear-gradient(180deg, #5ef6a5, #70f5ae, #80f7b8, #70f5ae, #5ef6a5);
     box-shadow: 0 0 15px #dddbdb;
     cursor: pointer;
 }
